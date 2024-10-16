@@ -1,0 +1,35 @@
+<div class="container">
+  <p class="display-5 mt-3 py-2">Click Counter</p>
+  <hr />
+  <p class="lead">Button has been clicked {{ count }} times.</p>
+  <button class="btn btn-primary" (click)="clickHandler()">Click Me</button>
+  <button class="btn btn-warning ms-2" (click)="resetHandler()">Reset</button>
+</div>
+
+<div class="container">
+  <p class="display-5 mt-3 py-2">Style Changer</p>
+  <hr />
+  <p class="lead {{color}} {{alignment}} {{size}}">Angular is a web framework that empowers developers to build fast, reliable
+    applications. Maintained by a dedicated team at Google, Angular provides a broad
+    suite of tools, APIs, and libraries to simplify and streamline your development
+    workflow.</p>
+  
+  <div class="d-flex justify-content-between">
+    <div>
+      <button class="btn btn-danger me-1" (click)="changeColor('red')">Red</button>
+      <button class="btn btn-primary me-1" (click)="changeColor('blue')">Blue</button>
+      <button class="btn btn-success me-1" (click)="changeColor('green')">Green</button>
+      <button class="btn btn-dark me-1" (click)="changeColor('black')">Black</button>
+    </div>
+    <div>
+      <button class="btn btn-secondary me-1" (click)="sizeChanger('small')">Small</button>
+      <button class="btn btn-warning me-1" (click)="sizeChanger('medium')">Medium</button>
+      <button class="btn btn-info me-1" (click)="sizeChanger('large')">Large</button>
+    </div>
+    <div>
+      <button class="btn btn-secondary me-1" (click)="alignmentChanger('center')">Center</button>
+      <button class="btn btn-warning me-1" (click)="alignmentChanger('left')">Left</button>
+      <button class="btn btn-info me-1" (click)="alignmentChanger('right')">Right</button>
+    </div>
+  </div>
+</div>
